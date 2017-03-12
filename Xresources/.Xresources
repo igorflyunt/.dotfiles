@@ -1,0 +1,22 @@
+ rofi.lines:                          5
+ rofi.location:                       1
+ rofi.width:                          430
+ rofi.yoffset:                        27
+ rofi.padding:                        20
+ rofi.opacity:                        100
+ rofi.line-margin:                    20
+ rofi.terminal:			              termite
+ rofi.run-command:                    {cmd}
+ rofi.hide-scrollbar:                 true
+ rofi.separator-style:                solid
+ rofi.font:                           xos4 Terminess Powerline bold 16
+! ------------------------------------------------------------------------------
+ rofi.color-enabled:                   true
+
+! !                  bg       border   separator
+ rofi.color-window: #444,    #444,    #00b3ff
+
+! !                  bg       fg       bg-alt   hl-bg    hl-fg
+ rofi.color-normal: #444,    #8f8f8f, #444,    #77333333, #1793d1
+ rofi.color-active: #d79921, #282828, #d79921, #fabd2f, #282828
+ rofi.color-urgent: #cc241d, #282828, #cc241d, #fb4934, #282828

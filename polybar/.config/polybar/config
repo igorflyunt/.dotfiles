@@ -1,0 +1,224 @@
+
+[colors]
+background = #00000000
+background-alt = #444
+foreground = #19BAFF
+foreground-alt = #19BAFF
+primary = #2E9DD5
+secondary = #e60053
+alert = #bd2c40
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+[bar/top_bar]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 100%
+height = 26
+offset-x = 0
+offset-y = 0 
+fixed-center = true
+;background = ${xrdb:color9}
+background = ${colors.background}
+foreground = ${colors.foreground}
+overline-size = 1
+underline-size = 2
+
+spacing = 1
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = "xos4 Terminess Powerline:bold:pixelsize=14;3"
+font-1 = "Fira Code:size=10:heavy:fontformat=truetype;-2"
+font-2 = "Font Awesome:size=12;3"
+
+modules-left = i3
+modules-center = cpu memory mpd
+modules-right = xkeyboard date time 
+
+tray-position = right
+tray-padding = 2
+;tray-transparent = true
+;tray-background = #0063ff
+
+;wm-restack = i3
+
+;override-redirect = true
+
+enable-scroll = false
+
+;scroll-up = bspwm-desknext
+;scroll-down = bspwm-deskprev
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+label-layout =%layout%
+label-layout-padding = 2
+label-layout-overline = ${colors.foreground-alt}
+label-layout-foreground = ${colors.primary}
+label-layout-background = ${colors.background-alt}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+format-mounted-prefix=" "
+format-mounted-prefix-foreground = ${colors.foreground-alt}
+mount-0 = /
+
+label-mounted =%mountpoint% %free% 
+label-mounted-foreground = ${colors.primary}
+
+#label-unmounted = %mountpoint%: not mounted
+#label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/i3]
+type = internal/i3
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default =
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = true
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+label-focused = %icon%
+label-focused-overline = ${colors.foreground-alt}
+label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.primary}
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-background = ${colors.background-alt}
+label-unfocused-foreground = ${colors.primary}
+label-unfocused-padding = 2
+
+label-urgent = %icon%!
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-visible = %icon%
+label-visible-foreground = #3d3d3d
+label-visible-padding = 2
+
+[module/mpd]
+type = internal/mpd
+interval = 1
+label-song-background = ${colors.background-alt}
+label-song-foreground = ${colors.primary}
+label-song-padding-right = 1
+
+format-online =<icon-pause><icon-play><icon-random><icon-repeat> <label-song>
+format-online-background = ${colors.background-alt}
+format-online-padding = 2
+
+icon-random = 
+icon-play = 
+icon-pause =  
+icon-repeat = 
+toggle-on-foreground = #ff
+toggle-off-foreground = #55
+label-song-maxlen = 40
+label-song-ellipsis = true
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-padding-left = 1
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-background = ${colors.background-alt}
+
+label = %percentage%%
+label-padding-right = 1
+label-foreground = ${colors.primary}
+label-background = ${colors.background-alt}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = " "
+format-prefix-padding-left = 1
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-background = ${colors.background-alt}
+
+label = %percentage_used%%
+label-foreground = ${colors.primary}
+label-background = ${colors.background-alt}
+label-padding-right = 1
+
+[module/eth]
+type = internal/network
+interface = enp2s0
+interval = 1.0 
+label-connected = 
+format-connected-foreground = ${colors.foreground-alt}
+
+label-disconnected = 
+label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/time]
+type = internal/date
+interval = 0
+
+time =" %I:%M %P"
+
+format-prefix = 
+format-prefix-foreground = ${colors.primary}
+format-prefix-background = ${colors.background-alt}
+format-prefix-padding-left = 1
+
+label = %time%
+label-foreground = ${colors.primary}
+label-background = ${colors.background-alt}
+label-padding-right = 1
+
+[module/date]
+type = internal/date
+interval = 0
+date = " %a %d %b"
+format-prefix =
+format-prefix-padding-left = 1
+format-prefix-foreground = ${colors.primary}
+format-prefix-background = ${colors.background-alt}
+label = %date%
+label-foreground = ${colors.primary}
+label-background = ${colors.background-alt}
+label-padding-right = 1
+
+[module/volume]
+type = internal/volume
+
+format-volume = <label-volume> 
+format-volume-prefix =" "
+format-volume-prefix-foreground= ${colors.foreground-alt}
+label-volume =%percentage%
+label-volume-foreground = ${colors.primary}
+format-muted-prefix = " "
+format-muted-foreground = ${colors.primary}
+label-muted = sound muted
+
+; vim:ft=dosini
