@@ -131,7 +131,8 @@ assign [class="Google-chrome"] $workspace1
 #dev tools ides
 assign [class="jetbrains-idea"] $wspace3
 assign [class="jetbrains-pycharm"] $wspace3
-assign [class="jetbrains-clion"] $wspace3
+assign [class="jetbrains-webstorm"] $wspace3
+assign [class="jetbrains-datagrip"] $wspace3
 #toggle htop instance to fullscreen on all workspaces
 for_window[class="Termite" instance="htop"] fullscreen enable
 
@@ -270,6 +271,7 @@ bindsym $ms+0 exec --no-startup-id termite --title=htop --name=htop -e "bash -li
 bindsym $ms+2 exec --no-startup-id ~/.bin/i3/ranger.sh
 bindsym $ms+3 exec --no-startup-id gsimplecal
 bindsym $ms+4 exec --no-startup-id qalculate-gtk
+bindsym $ms+5 exec --no-startup-id ~/.bin/i3/simple-calc
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
 

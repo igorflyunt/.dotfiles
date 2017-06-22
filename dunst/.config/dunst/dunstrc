@@ -11,22 +11,12 @@
     
     alignment = left
     
-    # The frequency with wich text that is longer than the notification
-    # window allows bounces back and forth.
-    # This option conflicts with "word_wrap".
-    # Set to 0 to disable.
     bounce_freq = 0
     
-    # Show age of message if message is older than show_age_threshold
-    # seconds.
-    # Set to -1 to disable.
     show_age_threshold = 60
     
-    # Split notifications into multiple lines if they don't fit into
-    # geometry.
     word_wrap = yes
     
-    # Ignore newlines '\n' in notifications.
     ignore_newline = no
     
     geometry = "350-0+29"
@@ -41,8 +31,6 @@
     
     follow = mouse
     
-    # Should a notification popped up from history be sticky or timeout
-    # as if it would normally do.
     sticky_history = yes
     
     history_length = 20
@@ -53,7 +41,6 @@
     
     separator_height = 1
     
-    # Padding between text and separator.
     padding = 8
     
     horizontal_padding = 15
@@ -67,7 +54,6 @@
     browser = /usr/bin/firefox -new-tab
 
     icon_position = left
-    icon_folders = /usr/share/icons/Arc/animations/16:/usr/share/icons/Arc/apps/16:/usr/share/icons/Arc/categories/16:/usr/share/icons/Arc/devices/16:/usr/share/icons/Arc/emblems/16:/usr/share/icons/Arc/mimetypes/16:/usr/share/icons/Arc/panel/16:/usr/share/icons/Arc/places/16:/usr/share/icons/Arc/status/16
 
 [frame]
     width = 0
@@ -84,17 +70,17 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#333333"
+    background = "#383c4a"
     foreground = "#1793d1"
-    timeout = 5
+    timeout = 3
 
 [urgency_normal]
-    background = "#333333"
+    background = "#383c4a"
     foreground = "#1793d1"
-    timeout = 5
+    timeout = 3
 
 [urgency_critical]
-    background = "#333333"
+    background = "#383c4a"
     foreground = "#1793d1"
     timeout = 0
 

@@ -6,10 +6,10 @@
     "layout": "splith",
     "percent": null,
     "rect": {
-       "height": 377,
-       "width": 766,
-       "x": 310,
-       "y": 162
+       "height": 430,
+       "width": 1058,
+       "x": 149,
+       "y": 36
     },
     "type": "floating_con",
     "nodes": [
@@ -23,8 +23,8 @@
                "x": 0,
                "y": 0
             },
-            "percent": 1,
             "name": "ncmpcpp",
+            "percent": 1,
             "swallows": [
                {
                "class": "^Termite$",

@@ -4,11 +4,19 @@ force_color_prompt=yes
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$'
 
+if [[ $TERM == xterm-termite ]]; then
+  . /etc/profile.d/vte.sh
+  __vte_prompt_command
+fi
+
+#dir colors 
+d=.dircolors
+test -r $d && eval "$(dircolors $d)"
 #
 # Bash-it
 export BASH_IT="/home/iflyunt/.bash_it"
 
-export BASH_IT_THEME='zork'
+export BASH_IT_THEME='bakke'
 
 # export BASH_IT_REMOTE='bash-it'
 
@@ -31,11 +39,6 @@ export SCM_CHECK=true
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
-
-
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
 man() {
         LESS_TERMCAP_md=$'\e[01;31m' \
         LESS_TERMCAP_me=$'\e[0m' \
@@ -44,7 +47,7 @@ man() {
         LESS_TERMCAP_ue=$'\e[0m' \
         LESS_TERMCAP_us=$'\e[01;32m' \
         command man "$@"
-    }
+}
 
 #aliases
 #
@@ -77,6 +80,8 @@ alias dfree='df -h'
 alias uum='udiskie-umount -f -d -e /dev/sdf1'
 alias e='nvim'
 alias se='sudo nvim'
+alias sysinfo='inxi -F && dfc'
+alias backup='rsync -av --copy-links --delete ~/Pictures ~/Documents ~/Music /media/External_HD/backup/'
 #
 #configs edit
 #
@@ -84,8 +89,8 @@ alias i3conf='nvim ~/.config/i3/config'
 alias barconf='nvim ~/.config/polybar/config'
 alias rangerconf='nvim ~/.config/ranger/rc.conf ~/.config/ranger/rifle.conf'
 alias .bashconf='nvim ~/.bashrc'
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-
-
+export EDITOR=nvim
