@@ -1,4 +1,3 @@
-shell sudo rm -rf transcend
 find ffmpeg
 shell ffmpeg -i friends.s08e15.720p.bluray.x264-mrs.sujaidr.mkv -map 0:3 15.srt
 mkdir core-java
@@ -48,3 +47,4 @@ find cor
 delete\
 delete'
 delete
+find int
