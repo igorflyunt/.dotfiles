@@ -2,9 +2,9 @@
 background = #383c4a
 background-alt = #383c4a
 #background-alt = #88333333
-foreground = #19BAFF
-foreground-alt = #73b6fa
-primary = #5395e0
+foreground = #5395e0
+foreground-alt = #d1d8e0
+primary = #b5bbc4
 secondary = #e60053
 alert = #bd2c40
 
@@ -21,7 +21,7 @@ offset-y = 0
 fixed-center = true
 ;background = ${xrdb:color9}
 background = ${colors.background}
-foreground = ${colors.foreground}
+foreground = ${colors.foreground-alt}
 overline-size = 1
 underline-size = 2
 
@@ -66,8 +66,8 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 label-layout =%layout%
 label-layout-padding = 2
-label-layout-overline = ${colors.foreground-alt}
-label-layout-foreground = ${colors.primary}
+label-layout-overline = ${colors.foreground}
+label-layout-foreground = ${colors.foreground-alt}
 label-layout-background = ${colors.background-alt}
 
 [module/filesystem]
@@ -110,9 +110,9 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 label-focused = %icon%
-label-focused-overline = ${colors.foreground-alt}
+label-focused-overline = ${colors.foreground}
 label-focused-background = ${colors.background-alt}
-label-focused-foreground = ${colors.primary}
+label-focused-foreground = ${colors.foreground-alt}
 label-focused-padding = 2
 
 label-unfocused = %icon%
@@ -137,6 +137,7 @@ label-song-padding-right = 1
 
 format-online =<icon-pause><icon-play><icon-random><icon-repeat> <label-song>
 format-online-background = ${colors.background-alt}
+format-online-foreground = ${colors.foreground-alt}
 ;format-online-padding-left = 2
 
 icon-random = 
@@ -190,7 +191,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 type = internal/date
 interval = 0
 
-time =" %I:%M %P"
+time =" %I:%M:%S %P"
 
 format-prefix = 
 format-prefix-foreground = ${colors.primary}
