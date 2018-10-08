@@ -1,0 +1,7 @@
+mpd/.config/mpd/log
+mpd/.config/mpd/pid
+*.log
+*.swp
+mpd/.config/mpd/log
+ranger/.config/ranger/history
+nvim/.local/share/nvim/shada/main.shada
