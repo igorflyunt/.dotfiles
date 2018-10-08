@@ -1,6 +1,6 @@
 [options]
 scrollback_lines = 10001
-font             = xos4 Terminess Powerline 14
+font             = xos4 Terminess Powerline 16
 clickable_url    = true
 browser          = google-chrome-stable
 allow_bold       = false

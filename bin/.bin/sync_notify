@@ -1,2 +1,0 @@
-#!/bin/sh
-notify-send "$(sync; echo Synchronized cached writes to persistent storage)"

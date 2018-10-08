@@ -1,0 +1,3 @@
+#!/bin/bash
+maim -q -u -d 0.100 | xclip -selection clipboard -t image/png 
+mpv --volume 150 ~/.bin/i3/prtsc/camera_click.ogg 

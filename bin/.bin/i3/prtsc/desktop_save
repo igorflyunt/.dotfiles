@@ -1,0 +1,3 @@
+#!/bin/bash
+maim -u -d 0.300 ~/Pictures/screenshots/$(date +%s).png
+mpv --volume 150 ~/.bin/i3/prtsc/camera_click.ogg 

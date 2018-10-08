@@ -1,2 +1,0 @@
-#!/bin/bash
-rofi -show calc -modi "calc:qalc +u8" -location 1

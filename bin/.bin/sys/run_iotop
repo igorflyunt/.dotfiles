@@ -1,0 +1,2 @@
+#!/bin/sh
+termite --title=iotop --name=iotop -e "sudo iotop"

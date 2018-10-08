@@ -1,0 +1,5 @@
+#!/bin/bash
+readonly ERROR='error'
+parsed_response=$(maim -s -u -d 0.300 2>&1 | xclip -selection clipboard -t image/png)
+echo "$parsed_response" | grep -i -o "$ERROR"
+mpv --volume 150 ~/.bin/i3/screenshot/camera_click.ogg 

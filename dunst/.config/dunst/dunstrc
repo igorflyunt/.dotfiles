@@ -19,7 +19,7 @@
     
     ignore_newline = no
     
-    geometry = "350-0+29"
+    geometry = "350-0+31"
     
     shrink = yes
     
@@ -45,7 +45,7 @@
     
     horizontal_padding = 15
     
-    separator_color = "#00b3ff"
+    separator_color = "#5395e0"
     
     startup_notification = false
     
@@ -71,17 +71,17 @@
 
 [urgency_low]
     background = "#383c4a"
-    foreground = "#1793d1"
+    foreground = "#a3abd6"
     timeout = 3
 
 [urgency_normal]
     background = "#383c4a"
-    foreground = "#1793d1"
+    foreground = "#a3abd6"
     timeout = 3
 
 [urgency_critical]
     background = "#383c4a"
-    foreground = "#1793d1"
+    foreground = "#a3abd6"
     timeout = 0
 
 # vim: ft=cfg

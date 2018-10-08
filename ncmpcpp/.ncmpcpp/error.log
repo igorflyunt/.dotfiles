@@ -1,2 +1,8 @@
 writeCommonTags: couldn't write 'year' tag to 'music-for-studying/classical.mp4' as it's not a positive integer
 writeCommonTags: couldn't write 'track' tag to 'music-for-studying/classical.mp4' as it's not a positive integer
+regexSearch: bad_expression: Unmatched [ or [^ in character class declaration.  The error occurred while parsing the regular expression: '[B>>>HERE>>>'.
+writeCommonTags: couldn't write 'year' tag to 'tony anderson - Immanuel.wav' as it's not a positive integer
+writeCommonTags: couldn't write 'track' tag to 'tony anderson - Immanuel.wav' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'tony anderson - Immanuel.wav' as it's not a positive integer
+writeCommonTags: couldn't write 'track' tag to 'tony anderson - Immanuel.wav' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'VA - True Detective (Music From the HBO Series) - 2015/01 Nevermind.m4a' as it's not a positive integer

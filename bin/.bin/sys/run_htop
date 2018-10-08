@@ -1,0 +1,2 @@
+#!/bin/sh
+termite --title=htop --name=htop -e "bash -lic htop"

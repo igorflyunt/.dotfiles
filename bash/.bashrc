@@ -36,6 +36,10 @@ export SCM_CHECK=true
 
 # export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 
+
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 # Load Bash It
 source $BASH_IT/bash_it.sh
 
@@ -49,48 +53,13 @@ man() {
         command man "$@"
 }
 
-#aliases
-#
-#pacman
-alias p='sudo pacman -S'
-alias pu='sudo pacman -Suy'
-alias pro='sudo pacman -Rns $(sudo pacman -Qtdq)'  # remove orphans
-alias pc='sudo pacman -Scc'                        # clean cache
-alias pr='sudo pacman -Rns'                        # remove package
-#
-#pacaur
-alias pau='pacaur -Suya'
-alias pa='pacaur -S'
-#
-#rm
-#
-alias rd='rm -rfv' #remove folder
-#
-#miscellaneous
-#
-alias s='sudo'
-alias h='history | less'
-alias c='clear'
-alias ll='ls -l'
-alias l.='ls -dl .*'
-alias ..='cd ..'
-alias 2..='cd ../../'
-alias 3..='cd ../../../'
-alias dfree='df -h'
-alias uum='udiskie-umount -f -d -e /dev/sdf1'
-alias e='nvim'
-alias se='sudo nvim'
-alias sysinfo='inxi -F && dfc'
-alias backup='rsync -av --copy-links --delete ~/Pictures ~/Documents ~/Music /media/External_HD/backup/'
-#
-#configs edit
-#
-alias i3conf='nvim ~/.config/i3/config'
-alias barconf='nvim ~/.config/polybar/config'
-alias rangerconf='nvim ~/.config/ranger/rc.conf ~/.config/ranger/rifle.conf'
-alias .bashconf='nvim ~/.bashrc'
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export EDITOR=nvim
+
+# Avoid succesive duplicates in the bash command history.
+export HISTCONTROL=ignoredups
+
+# aliases
+. ~/.bash_aliases
