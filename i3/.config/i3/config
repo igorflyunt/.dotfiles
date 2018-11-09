@@ -100,7 +100,9 @@ workspace $wspace9 gaps outer 20
 workspace $wspace9 gaps inner 20
 
 # Key bindings
-# 
+# 	Task switching between workspaces
+bindsym $mod+Tab workspace back_and_forth
+#
 #	scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show

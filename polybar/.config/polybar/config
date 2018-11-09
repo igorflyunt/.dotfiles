@@ -2,6 +2,8 @@ include-file = /home/iflyunt/.config/polybar/bars/top.conf
 include-file = /home/iflyunt/.config/polybar/bars/player.conf
 include-file = /home/iflyunt/.config/polybar/global.conf
 
+tray-padding = 2
+
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
